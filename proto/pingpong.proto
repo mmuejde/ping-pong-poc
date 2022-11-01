@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pingpong;
+
+service PingPong {
+    rpc send_ping (PingPongRequest) returns (PingPongResponse);
+}
+
+message PingPongRequest { 
+    string ping = 1;    
+}
+
+message PingPongResponse {
+    string pong = 1;
+}
